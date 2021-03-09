@@ -8,5 +8,6 @@ public class ButtonBehaviour : MonoBehaviour
     public void LoadScene(string name)
     {
         SceneManager.LoadScene(name);
+        
     }
 }
