@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\__Scripts\ButtonBehaviour.cs" />
+     <Compile Include="Assets\__Scripts\CardBackBehaviour.cs" />
      <Compile Include="Assets\__Scripts\CardBehaviour.cs" />
      <Compile Include="Assets\__Scripts\MainMenu.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
