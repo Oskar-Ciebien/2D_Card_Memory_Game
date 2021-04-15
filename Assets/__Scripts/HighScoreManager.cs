@@ -1,9 +1,9 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Data;
 using Mono.Data.Sqlite;
-using UnityEngine;
 using System.Collections.Generic;
 
 public class HighScoreManager : MonoBehaviour
@@ -15,6 +15,8 @@ public class HighScoreManager : MonoBehaviour
     public GameObject scorePrefab;
 
     public Transform scoreParent;
+
+    //public Text enterName;
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +64,7 @@ public class HighScoreManager : MonoBehaviour
 
             using (IDbCommand dbCmd = dbConnection.CreateCommand())
             {
-                string sqlQuery = "SELECT * FROM highscore";
+                string sqlQuery = "SELECT * FROM highscore ORDER BY score DESC";
 
                 dbCmd.CommandText = sqlQuery;
 
