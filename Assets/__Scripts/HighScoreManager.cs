@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class HighScoreManager : MonoBehaviour
 {
@@ -89,7 +90,7 @@ public class HighScoreManager : MonoBehaviour
 
             Highscore tmpScore = highscores[i];
 
-            tmpObjec.GetComponent<HighScoreScript>().SetScore(tmpScore.Name, tmpScore.Score.ToString(), "a" + (i + 1).ToString());
+            tmpObjec.GetComponent<HighScoreScript>().SetScore(tmpScore.Name, tmpScore.Score.ToString(), "#" + (i + 1).ToString());
 
             tmpObjec.transform.SetParent(scoreParent);
         }

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/__Scenes/New Game.unity
+- path: Assets/__Scenes/highscores.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
