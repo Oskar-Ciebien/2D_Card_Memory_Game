@@ -5,6 +5,7 @@ using System;
 using System.Data;
 using Mono.Data.Sqlite;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class HighScoreManager : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class HighScoreManager : MonoBehaviour
 
     public Transform scoreParent;
 
-    //public Text enterName;
+    public InputField enterName;
+
+    public GameObject nameDialog;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +33,26 @@ public class HighScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //game over end game screen click on escape
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            nameDialog.SetActive(!nameDialog.activeSelf);
+        }
         
+    }
+
+    public void EnterName()
+    {
+        if(enterName.text != string.Empty)
+        {
+            //Random number for score until score is system is made
+            int score = UnityEngine.Random.Range(1, 500);
+
+            InsertScore(enterName.text, score);
+            enterName.text = string.Empty;
+
+            ShowScores();
+        }
     }
 
     //adding scores to database
@@ -85,6 +107,11 @@ public class HighScoreManager : MonoBehaviour
     private void ShowScores()
     {
         GetScores();
+
+        foreach (GameObject score in GameObject.FindGameObjectsWithTag("Score"))
+        {
+            Destroy(score);
+        }
 
         for (int i = 0; i < highscores.Count; i++)
         {
