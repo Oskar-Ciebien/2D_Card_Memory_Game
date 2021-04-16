@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Highscore
 {
+    //for highscore database
     public int ID { get; set; }
     public string Name { get; set; }
     public int Score { get; set; }

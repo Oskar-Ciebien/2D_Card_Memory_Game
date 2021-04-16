@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class HighScoreScript : MonoBehaviour
 {
+    //highscore Script for Unity end
     public GameObject rank;
     public GameObject scoreName;
     public GameObject score;
