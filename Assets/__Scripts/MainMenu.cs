@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    // Variables
     public GameObject soundsOn;
     public GameObject soundsOff;
 
@@ -19,6 +20,8 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     } // Exit - END
+
+    // Sound code adapted from - https://www.youtube.com/watch?v=ABqmWhD5Ny8&ab_channel=Rabidgremlin
 
     // ToggleSound - Toggles the in-game sounds
     public void ToggleSound()
@@ -40,14 +43,19 @@ public class MainMenu : MonoBehaviour
         SetSoundsState();
     } // ToggleSound - END
 
+    // SetSoundsState - Sets the volume of the game
     private void SetSoundsState()
     {
+        // If the sounds are muted
         if (PlayerPrefs.GetInt("Muted", 0) == 0)
         {
+            // Turn the sounds on
             AudioListener.volume = 1;
         }
+        // If the sounds are on
         else
         {
+            // Turn the sounds off
             AudioListener.volume = 0;
         }
     }
