@@ -7,7 +7,7 @@ using Mono.Data.Sqlite;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class HighScoreManager : MonoBehaviour
+public class HighScoreManager : ScoreBehaviour // Changed MonoBehaviour to ScoreBehaviour to inherit from it // Oskar
 {
     private string connectionString;
 
@@ -46,9 +46,11 @@ public class HighScoreManager : MonoBehaviour
         if(enterName.text != string.Empty)
         {
             //Random number for score until score is system is made
-            int score = UnityEngine.Random.Range(1, 500);
+            //int score = UnityEngine.Random.Range(1, 500);
+            //InsertScore(enterName.text, score);
 
-            InsertScore(enterName.text, score);
+            // Inserts Score from the ScoreBehaviour Script // Oskar
+            InsertScore(enterName.text, (int)score);
             enterName.text = string.Empty;
 
             ShowScores();
