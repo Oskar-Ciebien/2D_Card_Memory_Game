@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Variables
-    public GameObject soundsOn;
-    public GameObject soundsOff;
+    [SerializeField] GameObject soundsOn;
+    [SerializeField] GameObject soundsOff;
 
     // Play - Starts the game, putting the player to level 1
     public void Play()
@@ -31,12 +31,20 @@ public class MainMenu : MonoBehaviour
         {
             // Set the value to 1
             PlayerPrefs.SetInt("Muted", 1);
+
+            // Switch off the on button and switch on the off button
+            soundsOn.SetActive(false);
+            soundsOff.SetActive(true);
         }
         // If the value is already set to 1
         else
         {
             // Set the value to 0
             PlayerPrefs.SetInt("Muted", 0);
+
+            // Switch on the on button and switch off the off button
+            soundsOn.SetActive(true);
+            soundsOff.SetActive(false);
         }
 
         // Calling SetSoundsState method
