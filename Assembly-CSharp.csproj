@@ -62,14 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\__Scripts\ButtonBehaviour.cs" />
-    <Compile Include="Assets\__Scripts\CardBehaviour.cs" />
-    <Compile Include="Assets\__Scripts\GameManager.cs" />
-    <Compile Include="Assets\__Scripts\HighScoreManager.cs" />
-    <Compile Include="Assets\__Scripts\HighScoreScript.cs" />
-    <Compile Include="Assets\__Scripts\Highscore.cs" />
-    <Compile Include="Assets\__Scripts\MainMenu.cs" />
-    <Compile Include="Assets\__Scripts\ScoreBehaviour.cs" />
+    <Compile Include="Assets\__Scripts\GameScripts\CardBehaviour.cs" />
+    <Compile Include="Assets\__Scripts\GameScripts\GameManager.cs" />
+    <Compile Include="Assets\__Scripts\GameScripts\ScoreBehaviour.cs" />
+    <Compile Include="Assets\__Scripts\Highscore\HighScoreManager.cs" />
+    <Compile Include="Assets\__Scripts\Highscore\HighScoreScript.cs" />
+    <Compile Include="Assets\__Scripts\Highscore\Highscore.cs" />
+    <Compile Include="Assets\__Scripts\Levels\LevelController.cs" />
+    <Compile Include="Assets\__Scripts\MainMenu\MainMenu.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
