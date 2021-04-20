@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     // Play - Starts the game, putting the player to level 1
     public void Play()
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("Level_Easy");
     } // Play - END
     
     // Exit - Exits the game
