@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
             if(pairsFound == (cardDifferences - 1))
             {
                 // Redirect player to the Main Menu
-                SceneManager.LoadScene("Main_Menu");
+                SceneManager.LoadScene("highscores");
             } // if - END
             
         } // if - END
