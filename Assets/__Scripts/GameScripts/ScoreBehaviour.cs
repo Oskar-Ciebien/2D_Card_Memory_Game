@@ -9,6 +9,8 @@ public class ScoreBehaviour : MonoBehaviour
     public Text scoreText;
     public float score;
 
+    // Score code adapted from https://www.youtube.com/watch?v=M9yOOIVI2xM&ab_channel=Cezary_Sharp
+
     // Start
     void Start()
     {
